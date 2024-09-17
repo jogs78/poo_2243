@@ -3,6 +3,5 @@ public class Casa {
  public void abrir(){
   //cerradura.llave = x
   //cerradura.girar()
-
  }
 }
