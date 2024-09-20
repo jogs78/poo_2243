@@ -22,7 +22,9 @@ class Cliente:
 class Vip(Cliente):
  def obtenerCredito():
   #codigo para obtener dinero
-  pass
+  pass 
+ def __gt__(self, otro):
+  return self.limite > otro.limite
 
 class CajeroAutomatico:
  def atender():
@@ -38,7 +40,16 @@ def main():
   # casaDeEjemplo = Casa();
   # casaDeEjemplo.setDireccion("5 norte pte 628");
   # casaDeEjemplo.abrir();
-  nuevo = Cliente()
-  nuevo.darDinero(cantidad=5000)
+
+  # nuevo = Cliente()
+  # nuevo.darDinero(cantidad=5000)
+
+  cliente1 = Vip()
+  cliente2 = Vip()
+  cliente1.limite = 1000
+  cliente2.limite = 500
+  if cliente1 > cliente2:
+    print("Cliente 1 es más VIP")
+
 if __name__ == "__main__":
  main()
